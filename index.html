@@ -1,78 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instagram Feed</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <script src="https://kit.fontawesome.com/05fa1878ea.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Feed</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/05fa1878ea.js" crossorigin="anonymous"></script>
 </head>
-  <body>
-    <div class="feed">
-      <!-- nav bar paste -->
-      <nav class="navbar bg-body-tertiary"> 
-        <div class="container-fluid">
-          <a class="navbar-brand"><i class="fa-brands fa-instagram">Instagram</i></a>
-          <form class="d-flex" role="search">
-            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#new-post-modal">Create a New Post</button>
-            <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+<body>
+  <div class="feed">
+    <!-- Navigation Bar -->
+    <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid d-flex justify-content-between align-items-center">
+        <a class="navbar-brand"><i class="fa-brands fa-instagram"></i> Instagram</a>
+        <div class="d-flex align-items-center">
+          <!-- Button with explicit margin -->
+          <button type="button" class="btn btn-success me-3" data-bs-toggle="modal" data-bs-target="#new-post-modal">
+            Create a New Post
+          </button>
+          <!-- Dropdown aligned properly -->
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
               <i class="fa-solid fa-gear"></i>
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </div>
-          </form>
-        </div>
-  </nav>
-      <!-- end of nav bar paste -->
-      <!-- modal paste -->
-      <div class="modal" tabindex="-1" id="new-post-modal">
-        <div class="modal-dialog">
-         <div class="modal-content">
-           <div class="modal-header">
-            <h5 class="modal-title">Create a new post</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"> X </button>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1" style="left: auto; right: 0;">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
           </div>
-  <div class="modal-body">
-    <h6>Caption:</h6>
-    <textarea class="form-control" aria-label="With textarea"></textarea>
-    <div>
-    <i class="fa-solid fa-camera fa-lg btn btn-light mx-1 my-3"></i>
-    <i class="fa-solid fa-location-dot fa-lg btn btn-light mx-1 my-3"></i>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Modal -->
+    <div class="modal fade" tabindex="-1" id="new-post-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Create a new post</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h6>Caption:</h6>
+            <textarea class="form-control" aria-label="With textarea"></textarea>
+            <div>
+              <i class="fa-solid fa-camera fa-lg btn btn-light mx-1 my-3"></i>
+              <i class="fa-solid fa-location-dot fa-lg btn btn-light mx-1 my-3"></i>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mode Switch -->
+    <div class="mode text-center mt-5">
+      <a href="index.html">
+        <button type="button" class="mode_btn">
+          <i class="fa-solid fa-table-cells"></i>
+        </button>
+      </a>
+      <a href="alternate.html">
+        <button type="button" class="mode_btn">
+          <i class="fa-solid fa-square"></i>
+        </button>
+      </a>
+    </div>
+
+    <!-- Posts Grid -->
+    <div class="container text-center mt-5">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <img src="images/Picture_1.JPG" class="img-fluid" alt="Picture 1">
+        </div>
+        <div class="col-md-4 mb-3">
+          <img src="images/Picture_2.JPG" class="img-fluid" alt="Picture 2">
+        </div>
+        <div class="col-md-4 mb-3">
+          <img src="images/Picture_3.JPG" class="img-fluid" alt="Picture 3">
+        </div>
+        <div class="col-md-4 mb-3">
+          <img src="images/Picture_4.JPG" class="img-fluid" alt="Picture 4">
+        </div>
+        <div class="col-md-4 mb-3">
+          <img src="images/Picture_5.JPG" class="img-fluid" alt="Picture 5">
+        </div>
+        <div class="col-md-4 mb-3">
+          <img src="images/Picture_6.JPG" class="img-fluid" alt="Picture 6">
+        </div>
+        <div class="col-md-4 mb-3">
+          <img src="images/Picture_7.JPG" class="img-fluid" alt="Picture 7">
+        </div>
+        <div class="col-md-4 mb-3">
+          <img src="images/Picture_8.JPG" class="img-fluid" alt="Picture 8">
+        </div>
+        <div class="col-md-4 mb-3">
+          <img src="images/Picture_9.JPG" class="img-fluid" alt="Picture 9">
+        </div>
+      </div>
     </div>
   </div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-    <button type="button" class="btn btn-primary">Save changes</button>
-  </div>
-</div>
-</div>
-</div>
-  <!-- end of modal paste -->
-        <div class="mode text-center">
-           <a href="index.html"> <button type="button" class="mode_btn"><i class="fa-solid fa-table-cells"></i>
-              </button>
-          </a>
-          <a href="alternate.html"><button type="button" class="mode_btn"><i class="fa-solid fa-square"></i></button>
-          </a>
-        </div>
-        <div class="posts text-center">
-            <img src="images/Picture_1.JPG" class=""></img>
-            <img src="images/Picture_2.JPG" class=""></img>
-            <img src="images/Picture_3.JPG" class=""></img>
-            <img src="images/Picture_4.JPG" class=""></img>
-            <img src="images/Picture_5.JPG" class=""></img>
-            <img src="images/Picture_6.JPG" class=""></img>
-            <img src="images/Picture_7.JPG" class=""></img>
-            <img src="images/Picture_8.JPG" class=""></img>
-            <img src="images/Picture_9.JPG" class=""></img>
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
